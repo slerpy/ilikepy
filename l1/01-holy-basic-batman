@@ -1,0 +1,13 @@
+#
+# obligatory
+#
+print "hello world!"
+
+#
+# minutes in 7 weeks
+#
+print 7 * 7 * 24 * 60
+
+#
+#
+#

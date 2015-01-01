@@ -41,8 +41,3 @@ start_quote=page.find('"',start_link)
 end_quote=page.find('"',start_quote+1)
 url=page[start_quote+1:end_quote]
 print url
-start_link=page.find("<a href=",end_quote)
-start_quote=page.find('"',start_link)
-end_quote=page.find('"',start_quote+1)
-url=page[start_quote+1:end_quote]
-print url

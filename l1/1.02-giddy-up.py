@@ -59,3 +59,8 @@ y = str(x + .5)
 dec = y.find(".")
 x = y[:dec]
 print x
+
+#
+# and that my friends is the end of the first chapter of many in our adventures.
+#
+# fin

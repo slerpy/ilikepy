@@ -17,7 +17,7 @@ __author__ = 'shaden'
 
 def rest_of_string(s):
     return s[1:]
-print rest_of_string("audacity")
+print rest_of_string("oshaden")
 
 def square(a):
     a = a * a
@@ -29,5 +29,14 @@ def sum3(a,b,c):
     return a+b+c
 print sum3(1,2,3)
 
-##
+###
+# doo bee doobedo.
+###
+def abbaize(firstWord, secondWord):
+    return firstWord+secondWord+secondWord+firstWord
+print abbaize("shaden","whoa")
+print abbaize("oh","whoa")
 
+###
+#
+###

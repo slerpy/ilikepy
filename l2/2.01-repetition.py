@@ -113,7 +113,7 @@ print "Separator"
 print is_friend("Geraldine")
 print is_friend("Nom Nommer")
 print is_friend("Donald McRonald")
-
+#
 
 
 

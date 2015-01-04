@@ -58,3 +58,62 @@ def find_second(search,target):
 twister = "she sells seashells by the seashore"
 print find_second(twister,'she')
 #>>> 13
+
+###
+# comparative operators return boolean values
+##
+
+def absolute(x):
+    if x<0:
+        x=-x
+    return x
+
+def bigger(a,b):
+    if a>b:
+        return a
+    else:
+        return b
+print bigger(3,2)
+print (7,3)
+#print (10,6)
+#print (5,9)
+
+###
+# If first name begins with D, they are a friend, otherwise, fuck them? Weird class lol.
+##
+def is_friend(name):
+    if name[0] == "D":
+        return True
+    else:
+        return False
+print is_friend('Dave')
+print is_friend('Sherlock')
+print is_friend('Watson')
+
+###
+# a much shorter version of the above example
+##
+
+def is_friend(name):
+    return name[0] == "D"
+print is_friend ("Steve")
+
+###
+# Now we can be friends with anyone whose names start with D or N! Who's discriminatory now?
+##
+
+def is_friend(name):
+    if name[0]=="D":
+        return True
+    if name[0]=="N":
+        return True
+    else:
+        return False
+print "Separator"
+print is_friend("Geraldine")
+print is_friend("Nom Nommer")
+print is_friend("Donald McRonald")
+
+
+
+

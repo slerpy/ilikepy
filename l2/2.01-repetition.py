@@ -68,13 +68,13 @@ def absolute(x):
         x=-x
     return x
 
-def bigger(a,b):
-    if a>b:
+def bigger(a, b):
+    if a > b:
         return a
     else:
         return b
-print bigger(3,2)
-print (7,3)
+print bigger(3, 2)
+print (7, 3)
 #print (10,6)
 #print (5,9)
 
@@ -94,18 +94,19 @@ print is_friend('Watson')
 # a much shorter version of the above example
 ##
 
+
 def is_friend(name):
     return name[0] == "D"
-print is_friend ("Steve")
+print is_friend("Steve")
 
 ###
 # Now we can be friends with anyone whose names start with D or N! Who's discriminatory now?
 ##
 
 def is_friend(name):
-    if name[0]=="D":
+    if name[0] == "D":
         return True
-    if name[0]=="N":
+    if name[0] == "N":
         return True
     else:
         return False
@@ -133,16 +134,90 @@ def biggest(a,b,c):
         else:
             return c
 
+# print biggest(3, 6, 9)
+# >>> 9
 
+# print biggest(6, 9, 3)
+# >>> 9
 
-#print biggest(3, 6, 9)
-#>>> 9
-
-#print biggest(6, 9, 3)
-#>>> 9
-
-#print biggest(9, 3, 6)
-#>>> 9
+# print biggest(9, 3, 6)
+# >>> 9
 
 print biggest(3, 3, 9)
-#>>> 9
+# >>> 9
+
+
+###
+# using the bigger proc from way ^^^ there :D
+###
+def biggerest(a, b, c):
+    return bigger(bigger(a, b), c)
+print biggerest(4, 6, 3)
+
+###
+# first loop
+###
+
+i = 0
+while i != 10:
+    i = i + 1
+    print i
+
+
+###
+# Please do not uncomment below block. Loops forever. and ever. and ever. and ever. and ever...
+###
+
+# i = 1
+# while i != 10:
+#    i = i + 2
+#    print i
+
+# separate
+
+print "----------------"
+print "----------------"
+
+# Define a procedure, print_numbers, that takes
+# as input a positive whole number, and prints
+# out all the whole numbers from 1 to the input
+# number.
+
+# Make sure your procedure prints "upwards", so
+# from 1 up to the input number.
+
+
+def print_numbers(n):
+    i = 1
+    while i <= n:
+        print i
+        i = i + 1
+print_numbers(5)
+
+#separator
+print "-----------"
+print "factored"
+print "-----------"
+
+
+# Define a procedure, factorial, that
+# takes one number as its input
+# and returns the factorial of
+# that number.
+
+###
+# I don't feel good about this one. Srsly.
+###
+
+def factored(n):
+    i = 1
+    while n >= 1:
+        i = i * n
+        n = n - 1
+    return i
+print factored(4)
+print factored(8)
+print factored(52)
+print factored(26)
+
+

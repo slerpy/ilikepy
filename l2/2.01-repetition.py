@@ -165,7 +165,7 @@ while i != 10:
 
 
 ###
-# Please do not uncomment below block. Loops forever. and ever. and ever. and ever. and ever...
+# Slerpy, do not uncomment below block. Loops forever. and ever. and ever. and ever. and ever...
 ###
 
 # i = 1
@@ -206,7 +206,7 @@ print "-----------"
 # that number.
 
 ###
-# I don't feel good about this one. Srsly.
+# I don't feel good about this one. Srsly. Way to much trial and error. Come back and work on this.
 ###
 
 def factored(n):

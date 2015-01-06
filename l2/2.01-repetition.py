@@ -221,3 +221,8 @@ print factored(52)
 print factored(26)
 
 
+###
+# k mostly finished up with l.2
+# just moving to the last lessons. :D :D
+###
+

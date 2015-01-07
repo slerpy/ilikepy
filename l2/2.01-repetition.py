@@ -226,3 +226,36 @@ print factored(26)
 # just moving to the last lessons. :D :D
 ###
 
+###
+# last of the problem sets.
+###
+
+# define procedure that will calculate median using previously used functions.
+
+
+def median(a,b,c):
+    if biggest(a,b,c) == a:
+        return bigger(b,c)
+    else:
+        if biggest(a,b,c) == b:
+            return bigger(a,c)
+        else:
+            if biggest(a,b,c) == c:
+                return bigger(a,b)
+
+print(median(1,2,3))
+print(median(9,3,6))
+print(median(7,8,7))
+
+print "-------------"
+print "-------------"
+# define a procedure that counts down from input int
+
+def countdown(n):
+    print n
+    while n > 1:
+        n = n -1
+        print n
+    print "Happy New Year twerps!"
+
+countdown(9)

@@ -32,3 +32,6 @@ def print_all_links(page):
             break
 # print_all_links('this is a test. it is only a test <a href="http://www.test.com">test 1</a><a href="http://www.test2.com">test 2</a><a href="http://test3.com">test 3</a>')
 #print_all_links(get_page('http://xkcd.com/353'))
+
+
+

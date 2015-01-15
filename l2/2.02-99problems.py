@@ -15,6 +15,7 @@ def nextDay(year, month, day):
         day = day + 1
 
     return(year, month, day)
+<<<<<<< HEAD
 print nextDay(2011, 12, 1)
 
 ###
@@ -30,3 +31,6 @@ def nextDay2(year, month, day):
         else:
             return year +1, 1, 1
 print nextDay2(2098, 11, 13)
+=======
+print nextDay(2011, 12, 1)
+>>>>>>> 1036801449ec0c4f56b7edae3efebaf3336ea277

@@ -19,7 +19,7 @@ def nextDay(year, month, day):
 print nextDay(2011, 12, 1)
 
 ###
-# another way to do above
+# another way to do above, not sure which is going to prove more useful.
 ###
 
 def nextDay2(year, month, day):

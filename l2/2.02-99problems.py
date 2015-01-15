@@ -16,3 +16,17 @@ def nextDay(year, month, day):
 
     return(year, month, day)
 print nextDay(2011, 12, 1)
+
+###
+# another way to do above
+###
+
+def nextDay2(year, month, day):
+    if day < 30:
+        return year, month, day + 1
+    else:
+        if month < 12:
+            return year, month + 1, 1
+        else:
+            return year +1, 1, 1
+print nextDay2(2098, 11, 13)

@@ -17,7 +17,7 @@ __author__ = 'shaden'
 
 def rest_of_string(s):
     return s[1:]
-print rest_of_string("oshaden")
+print rest_of_string ("oshaden")
 
 def square(a):
     a = a * a
@@ -230,31 +230,33 @@ print factored(26)
 # last of the problem sets.
 ###
 
-# define procedure that will calculate median using previously used functions.
+# a procedure that will calculate median using previously used functions.
 
 
-def median(a,b,c):
-    if biggest(a,b,c) == a:
-        return bigger(b,c)
+def median(a, b, c):
+    if biggest(a, b, c) == a:
+        return bigger(b, c)
     else:
-        if biggest(a,b,c) == b:
-            return bigger(a,c)
+        if biggest(a, b, c) == b:
+            return bigger(a, c)
         else:
-            if biggest(a,b,c) == c:
-                return bigger(a,b)
+            if biggest(a, b, c) == c:
+                return bigger(a, b)
 
-print(median(1,2,3))
-print(median(9,3,6))
-print(median(7,8,7))
+print(median(1, 2, 3))
+print(median(9, 3, 6))
+print(median(7, 8, 7))
 
 print "-------------"
 print "-------------"
-# define a procedure that counts down from input int
+
+# a procedure that counts down from input int
+
 
 def countdown(n):
     print n
     while n > 1:
-        n = n -1
+        n = n - 1
         print n
     print "Happy New Year twerps!"
 
@@ -262,7 +264,7 @@ countdown(9)
 
 
 __author__ = 'shaden'
-# Define a procedure, find_last, that takes as input
+# a procedure, find_last, that takes as input
 # two strings, a search string and a target string,
 # and returns the last position in the search string
 # where the target string appears, or -1 if there

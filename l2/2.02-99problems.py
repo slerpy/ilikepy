@@ -1,26 +1,31 @@
-####
+###
 # a procedure to add one day to a calendar, assuming all months are 30 days.
 # a test run into building a full calendar.
-####
+###
 
-def nextDayMeh(year, month, day):
-    if day == 30:
-        day = 1
-        if month == 12:
-            month = 1
-            year = year + 1
-        else:
-            month = month + 1
-    else:
-        day = day + 1
+###
+# commenting out since we have a better method below.
+###
 
-    return(year, month, day)
-
-print nextDayMeh(2011, 12, 1)
+# def nextDayMeh(year, month, day):
+#     if day == 30:
+#         day = 1
+#         if month == 12:
+#             month = 1
+#             year = year + 1
+#         else:
+#             month = month + 1
+#     else:
+#         day = day + 1
+#
+#     return(year, month, day)
+#
+# print nextDayMeh(2011, 12, 1)
 
 ###
 # a more elegant way to do above, not sure which is going to prove more useful.
 ###
+
 
 def nextDay(year, month, day):
     if day < 30:
@@ -60,15 +65,17 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
 #    print result
 #    return result
 
-###abdhik
+###
 # this is a little sexier than the above. works with negs.
 ###
+
 
     daysN = 0
     while year1 != year2 or month1 != month2 or day1 != day2:
         year1, month1, day1 = nextDay(year1, month1, day1)
         daysN = daysN + 1
     return daysN
+
 
 def test():
     test_cases = [((2012,9,30,2012,10,20),20),

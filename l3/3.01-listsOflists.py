@@ -41,3 +41,26 @@ stooges = ['Moe','Larry','Curly']
 stooges[2] = 'Shemp'
 print stooges
 
+###
+# A procedure, replace_spy,
+# that takes as its input a list of
+# three numbers, and modifies the
+# value of the third element in the
+# input list to be one more than its
+# previous value.
+# still don't understand why aliasing mutates this way.
+# i suspect im doing something different than the exercise intended.
+###
+
+
+spy = [0,0,7]
+def replace_spy(spy):
+    a = spy
+    b = a
+    b[2] = a[2]+1
+    return a
+
+replace_spy(spy)
+print spy
+#>>> [0,0,8]
+

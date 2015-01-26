@@ -39,12 +39,8 @@ print stooges
 
 
 ###
-# A procedure, replace_spy,
-# that takes as its input a list of
-# three numbers, and modifies the
-# value of the third element in the
-# input list to be one more than its
-# previous value.
+# takes as its input a list of three numbers, and modifies the value of the third element in the
+# input list to be one more than its previous value.
 # fixed to be a little more streamlined
 ###
 
@@ -126,6 +122,7 @@ print find_element(['alpha','beta'],'gamma') # returns -1
 
 
 ### using .index rather than the above
+
 print "find element 2"
 def find_element(x,y):
     if y in x:
@@ -135,3 +132,19 @@ def find_element(x,y):
 
 print find_element([1,2,3],3) # // 2
 print find_element(['alpha','beta'],'gamma') # // -1
+
+
+### take 2 lists, merge them. do not add duplicates
+
+print "Union"
+def union(x, y):
+    for item in y:
+        if item not in x:
+            x.append(item)
+
+a = [1,2,3]
+b = [2,4,6]
+union(a,b)
+print a #>>> [1,2,3,4,6]
+print b #>>> [2,4,6]
+

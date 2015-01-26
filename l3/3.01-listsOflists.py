@@ -58,9 +58,7 @@ print spy
 #>>> [0,0,8]
 
 
-###
-# list append, concatenation, length
-###
+### list append, concatenation, length
 
 p =[1, 2]
 p.append(3)
@@ -110,3 +108,30 @@ print measure_u(['Utah', 'Tony', 'Unanimous', 'Hillo!', 'Ubfunny'])
 
 
 # find first instance of something inside of list
+# If there is no matching element,
+# return -1.
+
+print "find element"
+def find_element(x, y):
+    found = 0
+    for e in x:
+        if e != y:
+            found = found + 1
+        else:
+            return found
+    return -1
+
+print find_element([1,2,3],3) # returns 2
+print find_element(['alpha','beta'],'gamma') # returns -1
+
+
+### using .index rather than the above
+print "find element 2"
+def find_element(x,y):
+    if y in x:
+        return x.index(y)
+    else:
+        return -1
+
+print find_element([1,2,3],3) # // 2
+print find_element(['alpha','beta'],'gamma') # // -1

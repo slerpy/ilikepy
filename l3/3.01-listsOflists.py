@@ -4,45 +4,35 @@
 ###
 
 
-###
-# procedure to figure out how many days in any chosen month
-# assumes non leap year
-###
+### procedure to figure out how many days in any chosen month. assumes non leap year
 
 days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 def how_many_days(month):
     return days_in_month[month - 1]
 print how_many_days(11)
 
-###
-# just testing slerping stuff out from lists
-###
+
+# slerping stuff out from lists
 
 countries = [['China','Beijing',1350],
              ['India','New Delhi',1210],
              ['Romania','Bucharest',21],
              ['United States','Washington DC',307]]
 
-# india capital
-print countries[1][1]
-# multiple of romanias pop to china
-print countries[0][2] / countries[2][2]
+print countries[1][1] # capital of india
+print countries[0][2] / countries[2][2] # multiple of romania pop to china
 
 
-###
 # mutate stooges to get rid of curly and replace with shemp
-###
 
 stooges = ['Moe','Larry','Curly']
 stooges[2] = 'Shemp'
-print stooges
+print stooges # ['Moe', 'Larry', 'Shemp']
 
 
-###
 # takes as its input a list of three numbers, and modifies the value of the third element in the
 # input list to be one more than its previous value.
 # fixed to be a little more streamlined
-###
 
 spy = [0,0,7]
 def replace_spy(n):
@@ -50,8 +40,7 @@ def replace_spy(n):
     return n
 
 replace_spy(spy)
-print spy
-#>>> [0,0,8]
+print spy # [0,0,8]
 
 
 ### list append, concatenation, length
@@ -87,7 +76,7 @@ def sum_list(n):
     return result
 
 
-print sum_list([1, 7, 4])
+print sum_list([1, 7, 4]) # 12
 
 
 ### for loop summing how many strings start with U
@@ -99,8 +88,8 @@ def measure_u(n):
         if y[0] == "U":
             result = result +1
     return result
-print measure_u(['Umika','Umberto'])
-print measure_u(['Utah', 'Tony', 'Unanimous', 'Hillo!', 'Ubfunny'])
+print measure_u(['Umika','Umberto']) # 2
+print measure_u(['Utah', 'Tony', 'Unanimous', 'Hillo!', 'Ubfunny']) # 3
 
 
 # find first instance of something inside of list
@@ -130,8 +119,8 @@ def find_element(x,y):
     else:
         return -1
 
-print find_element([1,2,3],3) # // 2
-print find_element(['alpha','beta'],'gamma') # // -1
+print find_element([1,2,3],3) #  2
+print find_element(['alpha','beta'],'gamma') #  -1
 
 
 ### take 2 lists, merge them. do not add duplicates

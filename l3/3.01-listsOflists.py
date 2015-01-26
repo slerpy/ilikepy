@@ -10,12 +10,9 @@
 ###
 
 days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
-
 def how_many_days(month):
     return days_in_month[month - 1]
 print how_many_days(11)
-
 
 ###
 # just testing slerping stuff out from lists
@@ -36,10 +33,10 @@ print countries[0][2] / countries[2][2]
 # mutate stooges to get rid of curly and replace with shemp
 ###
 
-
 stooges = ['Moe','Larry','Curly']
 stooges[2] = 'Shemp'
 print stooges
+
 
 ###
 # A procedure, replace_spy,
@@ -48,19 +45,68 @@ print stooges
 # value of the third element in the
 # input list to be one more than its
 # previous value.
-# still don't understand why aliasing mutates this way.
-# i suspect im doing something different than the exercise intended.
+# fixed to be a little more streamlined
 ###
 
-
 spy = [0,0,7]
-def replace_spy(spy):
-    a = spy
-    b = a
-    b[2] = a[2]+1
-    return a
+def replace_spy(n):
+    n[2] = n[2] + 1
+    return n
 
 replace_spy(spy)
 print spy
 #>>> [0,0,8]
 
+
+###
+# list append, concatenation, length
+###
+
+p =[1, 2]
+p.append(3)
+p = p+[4, 5]
+print len(p)
+
+p = [1, 2]
+q = [3, 4]
+p.append(q)
+
+print len(p)
+
+
+### for loop
+
+def print_all_elements(p):
+    for e in p:
+        print e
+
+print print_all_elements([1,3,4,5])
+
+
+### add all ints in a list together
+
+print "sum list"
+def sum_list(n):
+    result = 0
+    for y in n:
+        result = result + y
+    return result
+
+
+print sum_list([1, 7, 4])
+
+
+### for loop summing how many strings start with U
+
+print "Strings beginning with U"
+def measure_u(n):
+    result = 0
+    for y in n:
+        if y[0] == "U":
+            result = result +1
+    return result
+print measure_u(['Umika','Umberto'])
+print measure_u(['Utah', 'Tony', 'Unanimous', 'Hillo!', 'Ubfunny'])
+
+
+# find first instance of something inside of list

@@ -151,7 +151,7 @@ union(a, b)
 print a  # [1,2,3,4,6]
 print b  # [2,4,6]
 
-# teh beginning of what may be a long irc script to translate connerspeak ;)
+# teh beginning of what may be a long irc script to translate connerspeak to engrish ;)
 
 def connerSpeakFix(x):
     if x == "y'ello":

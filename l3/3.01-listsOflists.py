@@ -151,3 +151,12 @@ union(a, b)
 print a  # [1,2,3,4,6]
 print b  # [2,4,6]
 
+# teh beginning of what may be a long irc script to translate connerspeak ;)
+
+def connerSpeakFix(x):
+    if x == "y'ello":
+        end = x[2:]
+        all = "h" + end
+    return all
+print connerSpeakFix("y'ello")
+

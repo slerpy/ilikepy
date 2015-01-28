@@ -160,3 +160,34 @@ def connerSpeakFix(x):
     return all
 print connerSpeakFix("y'ello")
 
+
+# procedure that will multiply items and return product
+
+print "product"
+def product_list(p):
+    a = 1
+    for e in p:
+        a = a * e
+    return a
+print product_list([9]) # 9
+print product_list([1,2,3,4]) # 24
+print product_list([]) # 1
+
+
+# take list and give back largest number or 0 if none
+
+def greatest(p):
+    if len(p)==0:
+        return 0
+    else:
+        i=0
+        for e in p:
+            while e > p[i]:
+                i=i+1
+        return p[i]
+
+print greatest([4,23,1]) # 23
+print greatest([]) # 0
+
+
+

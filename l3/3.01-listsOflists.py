@@ -190,4 +190,33 @@ print greatest([4,23,1]) # 23
 print greatest([]) # 0
 
 
+# rewrite of above since simple is probably better
+
+print "greatest redux"
+def greatest(list):
+    if list == []:
+        return 0
+    ginormous = list[0]
+    for e in list:
+        if e > ginormous:
+            ginormous = e
+    return ginormous
+print greatest([4,23,1]) # 23
+print greatest([10,68,2,0,25,45,78,99,103,69]) # 103
+print greatest([])
+
+
+# rewrite of above again, because the if statement is needless. i just assign ginormous 0
+
+print "greatest part tree"
+def greatest(list):
+    ginormous = 0
+    for e in list:
+        if e > ginormous:
+            ginormous = e
+    return ginormous
+print greatest([3,53,24,52,73,3453,2456,234]) # 3453
+print greatest([3,6,8,3,5,9,4]) # 9
+print greatest([0])
+
 

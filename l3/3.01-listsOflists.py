@@ -220,3 +220,25 @@ print greatest([3,6,8,3,5,9,4]) # 9
 print greatest([0])
 
 
+# take a list of universities, return total enrollment numbers and total tuition
+
+print "university stuffs"
+udacious_univs = [['Udacity',90000,0]]
+
+usa_univs = [ ['California Institute of Technology',2175,37704],
+              ['Harvard',19627,39849],
+              ['Massachusetts Institute of Technology',10566,40732],
+                       ['Princeton',7802,37000],
+              ['Rice',5879,35551],
+              ['Stanford',19535,40569],
+              ['Yale',11701,40500]  ]
+
+def total_enrollment(list):
+    enroll = 0
+    tuition = 0
+    for e in list:
+        enroll = e[1] + enroll
+        tuition = e[1] * e[2] + tuition
+    return enroll, tuition
+print total_enrollment(udacious_univs) # 90000,0
+print total_enrollment(usa_univs) # 77285,3058581079

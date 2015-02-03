@@ -47,4 +47,5 @@ def crawl_web(seed, max_pages):
             union(tocrawl, get_all_links(get_page(page)))
             crawled.append(page)
             remaining = remaining - 1
+    print len(crawled) # test, remove before crawler finished.
     return crawled

@@ -11,7 +11,7 @@ def get_page(url): # just a dummy page to test url slerping.
         return ""
     return ""
 
-def get_next_target(page):
+def get_next_target(page):      # start populating with links.
     start_link = page.find('<a href=')
     if start_link == -1:
         return None, 0
@@ -20,13 +20,13 @@ def get_next_target(page):
     url = page[start_quote + 1:end_quote]
     return url, end_quote
 
-def union(x,y):
+def union(x,y):     # append everything from y list into x
     for item in y:
         if item not in x:
             x.append(item)
 
 
-def get_all_links(page):
+def get_all_links(page):    # slerp all the links and create our list
     links = []
     while True:
         url,endpos = get_next_target(page)
@@ -37,15 +37,17 @@ def get_all_links(page):
             break
     return links
 
-def crawl_web(seed, max_pages):
+def crawl_web(seed, max_depth):     # deep dive through pages from seed links and grab more. respect max_depth.
     tocrawl = [seed]
     crawled = []
-    remaining = max_pages
-    while tocrawl:
+    depth_total = []
+    depth = 0
+    while tocrawl and depth <= max_depth:
         page = tocrawl.pop()
-        if page not in crawled and remaining > 0:
-            union(tocrawl, get_all_links(get_page(page)))
+        if page not in crawled:
+            union(depth_total, get_all_links(get_page(page)))
             crawled.append(page)
-            remaining = remaining - 1
-    print len(crawled) # test, remove before crawler finished.
+        if not tocrawl:
+            tocrawl, depth_total = depth_total, []
+            depth = depth + 1
     return crawled

@@ -1,6 +1,6 @@
 ###
 # as we move into chapter 3 of our adventures, we appear to be learning how to make
-# lists. are these the same as arrays?
+# lists.
 ###
 
 

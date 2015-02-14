@@ -48,19 +48,38 @@ def get_all_links(page):    # slerp all the links and create our list
         else:
             break
     return links
+index = []
 
 
-def crawl_web(seed, max_depth):     # deep dive through pages from seed links and grab more. respect max_depth.
+def add_to_index(index, keyword, url):  # populate our index, but first make sure keyword is not already in list.
+    for e in index:
+        if e[0] == keyword:
+            e[1].append(url)
+            return
+    index.append([keyword,[url]])
+
+
+def lookup(index, keyword):     # lookup keywords in our list.
+    for e in index:
+        if e[0] == keyword:
+            return e[1]
+    return []
+
+
+def add_page_to_index(index,url,content):   # .split all words into a list and run them through the add_to_index
+    for words in content.split():           #  procedure to populate our index.
+        add_to_index(index, words, url)
+
+
+def crawl_web(seed):     # deep dive through pages from seed links and grab more.
     tocrawl = [seed]
     crawled = []
-    depth_total = []
-    depth = 0
-    while tocrawl and depth <= max_depth:
+    index = []
+    while tocrawl:
         page = tocrawl.pop()
         if page not in crawled:
-            union(depth_total, get_all_links(get_page(page)))
+            content = get_page(page)
+            add_page_to_index(index, page, content)
+            union(tocrawl, get_all_links(content)
             crawled.append(page)
-        if not tocrawl:
-            tocrawl, depth_total = depth_total, []
-            depth = depth + 1
-    return crawled
+        return index

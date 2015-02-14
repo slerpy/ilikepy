@@ -37,7 +37,7 @@ def abbaize(firstWord, secondWord):
 print abbaize("shaden","whoa")
 print abbaize("oh","whoa")
 
-# Define a procedure, find_second, that takes
+# a procedure, find_second, that takes
 # two strings as its inputs: a search string
 # and a target string. It should return a
 # number that is the position of the second
@@ -79,7 +79,7 @@ print (7, 3)
 #print (5,9)
 
 ###
-# If first name begins with D, they are a friend, otherwise, fuck them? Weird class lol.
+# If first name begins with D, they are a friend, otherwise, fuck them? lol.
 ##
 def is_friend(name):
     if name[0] == "D":
@@ -100,7 +100,7 @@ def is_friend(name):
 print is_friend("Steve")
 
 ###
-# Now we can be friends with anyone whose names start with D or N! Who's discriminatory now?
+# Now we can be friends with anyone whose names start with D or N.
 ##
 
 def is_friend(name):
@@ -114,7 +114,6 @@ print "Separator"
 print is_friend("Geraldine")
 print is_friend("Nom Nommer")
 print is_friend("Donald McRonald")
-#
 
 
 ###
@@ -164,10 +163,8 @@ while i != 10:
     print i
 
 
-###
-# Slerpy, do not uncomment below block. Loops forever. and ever. and ever. and ever. and ever...
-###
 
+# Looopy
 # i = 1
 # while i != 10:
 #    i = i + 2

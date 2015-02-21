@@ -40,9 +40,26 @@ def test_hash_function(func, keys, size):
             keys_used.append(w)
     return results
 
-words = get_page('http://www.gutenberg.org/cache/epub/1661/pg1661.txt').split()
+# uncommented line just to stop it from pestering gutenberg
+#words = get_page('http://www.gutenberg.org/cache/epub/1661/pg1661.txt').split()  #
 counts = test_hash_function(hash_string, words, 100)
 print counts
+
+
+def make_hashtable(nbuckets):   # create our empty buckets
+    nb = 0                      # number of buckets counter
+    hashtable = []              # empty hashtable to start with
+    while n < nb:               # loop through and do your job.
+        hashtable.append([])
+        nb += 1
+    return ht
+
+def make_hashtable_better(nbuckets):        # better version of above
+    hashtable = []                          # better because: shorter, and
+    for useless_var in range(0,nbuckets):   # removes danger of forgetting to increment counter
+        table.append([])
+    return hashtable
+
 
 
     

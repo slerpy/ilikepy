@@ -24,6 +24,7 @@ def hash_string(keyword, buckets):  # this should give us a modulo that
     for e in keyword:
         out = (out + ord(s)) % buckets
     return out
+
 #print hash_string('a', 12) # 1
 #print hash_string('b', 12) # 2
 #print hash_string('a', 13) # 6
@@ -74,6 +75,13 @@ def hashtable_add(htable, key, value):              # same as above, only done t
     hashtable_get_bucket(htable, key).append([key, value])
 
 
+def hashtable_lookup(htable,key):                   # find bucket, for through find matching keys, return value
+    a = hashtable_get_bucket(htable,key)            # else return none
+    for e in a:
+        if e[0] == key:
+            return e[1]
+       # return "None"
+    return none
 
     
 

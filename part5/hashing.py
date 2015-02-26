@@ -80,8 +80,17 @@ def hashtable_lookup(htable,key):                   # find bucket, for through f
     for e in a:
         if e[0] == key:
             return e[1]
-       # return "None"
-    return none
+    return None
+
+def hashtable_update(htable,key,value):             # if key already exists in our hash, update value.
+    bucket = hashtable_get_bucket(htable,key)
+    if hashtable_lookup(htable, key) == None:
+        hashtable_add(htable, key, value)
+    else:
+        for entry in bucket:
+            if entry[0] == key:
+                entry[1] = value
+    return htable
 
     
 

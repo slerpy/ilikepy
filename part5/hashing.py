@@ -82,6 +82,7 @@ def hashtable_lookup(htable,key):                   # find bucket, for through f
             return e[1]
     return None
 
+
 def hashtable_update(htable,key,value):             # if key already exists in our hash, update value.
     bucket = hashtable_get_bucket(htable,key)
     if hashtable_lookup(htable, key) == None:

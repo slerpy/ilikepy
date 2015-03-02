@@ -94,4 +94,8 @@ def hashtable_update(htable,key,value):             # if key already exists in o
     return htable
 
     
+# Take a list of courses return various procedures
+
+
+
 

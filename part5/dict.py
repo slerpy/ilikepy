@@ -91,3 +91,26 @@ def when_offered(courses,course):           # return the hexamester in which a c
 print when_offered(courses, 'cs101')
 print when_offered(courses, 'bio893')
 print when_offered(courses, 'cs003')
+
+
+def involved(courses, person):              # which courses are a particular prof involved in?
+    newdict = {}
+    for hexa in courses:
+        for classno in courses[hexa]:
+            for everyting_else in courses[hexa][classno]:
+                if courses[hexa][classno][everyting_else] == person:
+                    if hexa in newdict:
+                        newdict[hexa].append(classno)
+                    else:
+                        newdict[hexa] = [classno]
+    return newdict
+
+
+
+# For example:
+
+print involved(courses, 'Dave')
+#>>> {'apr2012': ['cs101', 'cs387'], 'feb2012': ['cs101']}
+
+print involved(courses, 'Peter C.')
+#>>> {'apr2012': ['cs262'], 'feb2012': ['cs101']}

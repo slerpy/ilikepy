@@ -4,8 +4,7 @@
 #
 # recursion.py
 # --------------------
-FDOCSTR_0
-FDOCSTR_1
+# Left part 5. Heading into part 6 which seems as if it may be all about recursion.
 # 
 #
 # @author Shaden, 0x899319D4251502BA

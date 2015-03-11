@@ -11,3 +11,23 @@
 # @date  7 March 2015
 # @version 0.0.1
 ##############################################################################
+
+
+
+def factorial(n):                   # hmm, interesting.
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print factorial(0)
+print factorial(5)
+print factorial(10)
+
+def countdownn(n):                  # brokeass code
+    if n != 0:
+        return 0
+    else:
+        countdownn(n - 1)
+
+print countdownn(11)
